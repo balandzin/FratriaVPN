@@ -11,32 +11,32 @@ import NetworkExtension
 class VPNManager {
     static let shared = VPNManager()
     private let vpnManager = NETunnelProviderManager()
-
+    
     private init() {}
-
+    
     // MARK: - VPN Control
     func setupVPN(completion: @escaping (Error?) -> Void) {
         vpnManager.loadFromPreferences { [weak self] error in
-            if let error = error {
+            if let error {
                 completion(error)
                 return
             }
-
+            
             guard let self = self else { return }
-
+            
             let tunnelProtocol = NETunnelProviderProtocol()
-            tunnelProtocol.serverAddress = "lon5.vpntype.dev"  // Адрес сервера
+            tunnelProtocol.serverAddress = "lon5.vpntype.dev"
             tunnelProtocol.providerConfiguration = [
                 "vlessConfig": self.generateVLESSConfig()
             ]
             tunnelProtocol.disconnectOnSleep = false
-
+            
             self.vpnManager.protocolConfiguration = tunnelProtocol
             self.vpnManager.localizedDescription = "VLESS VPN"
             self.vpnManager.isEnabled = true
-
+            
             self.vpnManager.saveToPreferences { error in
-                if let error = error {
+                if let error {
                     print("Failed to save VPN preferences: \(error)")
                     completion(error)
                 } else {
@@ -45,14 +45,14 @@ class VPNManager {
             }
         }
     }
-
+    
     func startVPN() {
         vpnManager.loadFromPreferences { error in
-            if let error = error {
+            if let error {
                 print("Failed to load VPN preferences: \(error)")
                 return
             }
-
+            
             do {
                 try self.vpnManager.connection.startVPNTunnel()
                 print("VPN started.")
@@ -61,12 +61,12 @@ class VPNManager {
             }
         }
     }
-
+    
     func stopVPN() {
         vpnManager.connection.stopVPNTunnel()
         print("VPN stopped.")
     }
-
+    
     // MARK: - VPN Configuration
     private func generateVLESSConfig() -> [String: Any] {
         return [
