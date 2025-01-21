@@ -1,4 +1,3 @@
-//
 //  VPNViewController.swift
 //  FratriaVPN
 //

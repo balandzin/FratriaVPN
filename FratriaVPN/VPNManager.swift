@@ -1,10 +1,10 @@
-//
 //  VPNManager.swift
 //  FratriaVPN
 //
 //  Created by Антон Баландин on 21.01.25.
 //
 
+import Foundation
 import NetworkExtension
 
 class VPNManager {
@@ -13,6 +13,7 @@ class VPNManager {
     
     private init() {}
     
+    // MARK: - VPN Control
     func setupVPN(completion: @escaping (Error?) -> Void) {
         vpnManager.loadFromPreferences { [weak self] error in
             if let error {
@@ -42,5 +43,26 @@ class VPNManager {
                 }
             }
         }
+    }
+    
+    func startVPN() {
+        vpnManager.loadFromPreferences { error in
+            if let error {
+                print("Failed to load VPN preferences: \(error)")
+                return
+            }
+            
+            do {
+                try self.vpnManager.connection.startVPNTunnel()
+                print("VPN started.")
+            } catch {
+                print("Failed to start VPN tunnel: \(error)")
+            }
+        }
+    }
+    
+    func stopVPN() {
+        vpnManager.connection.stopVPNTunnel()
+        print("VPN stopped.")
     }
 }
