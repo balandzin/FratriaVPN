@@ -62,20 +62,6 @@
 			);
 			target = D39A09662D3EA5AD001919E2 /* FratriaVPN */;
 		};
-		D39A09E62D3FB19B001919E2 /* Exceptions for "VPNExtension" folder in "VPNExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = D39A09D62D3FB19B001919E2 /* VPNExtension */;
-		};
-		D39A09EB2D3FB542001919E2 /* Exceptions for "FratriaVPN" folder in "VPNExtension" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				App/MyApp_Development_Profile.mobileprovision,
-			);
-			target = D39A09D62D3FB19B001919E2 /* VPNExtension */;
-		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -83,16 +69,12 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				D39A09792D3EA5AF001919E2 /* Exceptions for "FratriaVPN" folder in "FratriaVPN" target */,
-				D39A09EB2D3FB542001919E2 /* Exceptions for "FratriaVPN" folder in "VPNExtension" target */,
 			);
 			path = FratriaVPN;
 			sourceTree = "<group>";
 		};
 		D39A09DB2D3FB19B001919E2 /* VPNExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				D39A09E62D3FB19B001919E2 /* Exceptions for "VPNExtension" folder in "VPNExtension" target */,
-			);
 			path = VPNExtension;
 			sourceTree = "<group>";
 		};
