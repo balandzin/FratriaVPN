@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D39A09BD2D3EC1CB001919E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D39A09BC2D3EC1CB001919E2 /* SnapKit */; };
 		D39A09E22D3FB19B001919E2 /* VPNExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D39A09D72D3FB19B001919E2 /* VPNExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D39A09EC2D3FC3FE001919E2 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */; };
 		D39A09ED2D3FC3FE001919E2 /* NetworkExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D39A0A952D3FE055001919E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D39A0A942D3FE055001919E2 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39A09BD2D3EC1CB001919E2 /* SnapKit in Frameworks */,
+				D39A0A952D3FE055001919E2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 			);
 			name = FratriaVPN;
 			packageProductDependencies = (
-				D39A09BC2D3EC1CB001919E2 /* SnapKit */,
+				D39A0A942D3FE055001919E2 /* SnapKit */,
 			);
 			productName = FratriaVPN;
 			productReference = D39A09672D3EA5AD001919E2 /* FratriaVPN.app */;
@@ -224,7 +224,7 @@
 			mainGroup = D39A095E2D3EA5AD001919E2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				D39A09BB2D3EC1CB001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D39A0A932D3FE055001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D39A09682D3EA5AD001919E2 /* Products */;
@@ -566,7 +566,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D39A09BB2D3EC1CB001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		D39A0A932D3FE055001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -577,9 +577,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D39A09BC2D3EC1CB001919E2 /* SnapKit */ = {
+		D39A0A942D3FE055001919E2 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D39A09BB2D3EC1CB001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = D39A0A932D3FE055001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
