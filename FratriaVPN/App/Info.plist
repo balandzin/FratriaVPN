@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+
+    <!-- Разрешение на выполнение фоновый задач для сетевых операций (необходим для VPN) -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>networking</string>
+    </array>
+
+    <!-- Разрешение на использование произвольных загрузок, например, для подключения к нестандартным серверам -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+        <!-- В идеале, если возможно, добавьте конкретные правила для серверов -->
+    </dict>
+
+    <!-- Разрешение на использование VPN API -->
+    <key>com.apple.developer.networking.vpn.api</key>
+    <true/>
+
+    <!-- Разрешение на использование Network Extensions для proxy -->
+    <key>NetworkExtensions</key>
+    <array>
+        <string>app-proxy-provider</string>
+    </array>
+
+</dict>
 </plist>

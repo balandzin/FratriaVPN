@@ -7,11 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D39A09812D3EA75B001919E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D39A09802D3EA75B001919E2 /* SnapKit */; };
+		D39A09BD2D3EC1CB001919E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D39A09BC2D3EC1CB001919E2 /* SnapKit */; };
+		D39A09E22D3FB19B001919E2 /* VPNExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D39A09D72D3FB19B001919E2 /* VPNExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D39A09EC2D3FC3FE001919E2 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */; };
+		D39A09ED2D3FC3FE001919E2 /* NetworkExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D39A09E02D3FB19B001919E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39A095F2D3EA5AD001919E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D39A09D62D3FB19B001919E2;
+			remoteInfo = VPNExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D39A09E72D3FB19B001919E2 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D39A09E22D3FB19B001919E2 /* VPNExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39A09EE2D3FC3FE001919E2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D39A09ED2D3FC3FE001919E2 /* NetworkExtension.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D39A09672D3EA5AD001919E2 /* FratriaVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FratriaVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39A09D72D3FB19B001919E2 /* VPNExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -22,6 +62,20 @@
 			);
 			target = D39A09662D3EA5AD001919E2 /* FratriaVPN */;
 		};
+		D39A09E62D3FB19B001919E2 /* Exceptions for "VPNExtension" folder in "VPNExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D39A09D62D3FB19B001919E2 /* VPNExtension */;
+		};
+		D39A09EB2D3FB542001919E2 /* Exceptions for "FratriaVPN" folder in "VPNExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				App/MyApp_Development_Profile.mobileprovision,
+			);
+			target = D39A09D62D3FB19B001919E2 /* VPNExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -29,8 +83,17 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				D39A09792D3EA5AF001919E2 /* Exceptions for "FratriaVPN" folder in "FratriaVPN" target */,
+				D39A09EB2D3FB542001919E2 /* Exceptions for "FratriaVPN" folder in "VPNExtension" target */,
 			);
 			path = FratriaVPN;
+			sourceTree = "<group>";
+		};
+		D39A09DB2D3FB19B001919E2 /* VPNExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D39A09E62D3FB19B001919E2 /* Exceptions for "VPNExtension" folder in "VPNExtension" target */,
+			);
+			path = VPNExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -40,7 +103,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39A09812D3EA75B001919E2 /* SnapKit in Frameworks */,
+				D39A09BD2D3EC1CB001919E2 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39A09D42D3FB19B001919E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D39A09EC2D3FC3FE001919E2 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				D39A09692D3EA5AD001919E2 /* FratriaVPN */,
+				D39A09DB2D3FB19B001919E2 /* VPNExtension */,
+				D39A09D82D3FB19B001919E2 /* Frameworks */,
 				D39A09682D3EA5AD001919E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,8 +132,17 @@
 			isa = PBXGroup;
 			children = (
 				D39A09672D3EA5AD001919E2 /* FratriaVPN.app */,
+				D39A09D72D3FB19B001919E2 /* VPNExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D39A09D82D3FB19B001919E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -73,21 +155,46 @@
 				D39A09632D3EA5AD001919E2 /* Sources */,
 				D39A09642D3EA5AD001919E2 /* Frameworks */,
 				D39A09652D3EA5AD001919E2 /* Resources */,
+				D39A09E72D3FB19B001919E2 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D39A09E12D3FB19B001919E2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D39A09692D3EA5AD001919E2 /* FratriaVPN */,
 			);
 			name = FratriaVPN;
 			packageProductDependencies = (
-				D39A09802D3EA75B001919E2 /* SnapKit */,
+				D39A09BC2D3EC1CB001919E2 /* SnapKit */,
 			);
 			productName = FratriaVPN;
 			productReference = D39A09672D3EA5AD001919E2 /* FratriaVPN.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D39A09D62D3FB19B001919E2 /* VPNExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D39A09E32D3FB19B001919E2 /* Build configuration list for PBXNativeTarget "VPNExtension" */;
+			buildPhases = (
+				D39A09D32D3FB19B001919E2 /* Sources */,
+				D39A09D42D3FB19B001919E2 /* Frameworks */,
+				D39A09D52D3FB19B001919E2 /* Resources */,
+				D39A09EE2D3FC3FE001919E2 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D39A09DB2D3FB19B001919E2 /* VPNExtension */,
+			);
+			name = VPNExtension;
+			packageProductDependencies = (
+			);
+			productName = VPNExtension;
+			productReference = D39A09D72D3FB19B001919E2 /* VPNExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,6 +209,9 @@
 					D39A09662D3EA5AD001919E2 = {
 						CreatedOnToolsVersion = 16.2;
 					};
+					D39A09D62D3FB19B001919E2 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = D39A09622D3EA5AD001919E2 /* Build configuration list for PBXProject "FratriaVPN" */;
@@ -114,7 +224,7 @@
 			mainGroup = D39A095E2D3EA5AD001919E2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				D39A097F2D3EA75B001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D39A09BB2D3EC1CB001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D39A09682D3EA5AD001919E2 /* Products */;
@@ -122,12 +232,20 @@
 			projectRoot = "";
 			targets = (
 				D39A09662D3EA5AD001919E2 /* FratriaVPN */,
+				D39A09D62D3FB19B001919E2 /* VPNExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D39A09652D3EA5AD001919E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D39A09D52D3FB19B001919E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +262,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D39A09D32D3FB19B001919E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D39A09E12D3FB19B001919E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D39A09D62D3FB19B001919E2 /* VPNExtension */;
+			targetProxy = D39A09E02D3FB19B001919E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D39A097B2D3EA5AF001919E2 /* Debug */ = {
@@ -152,17 +285,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FratriaVPN/FratriaVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NJJ6TC72GU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FratriaVPN/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FratriaVPN",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.balandzin.FratriaVPN;
@@ -182,17 +322,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FratriaVPN/FratriaVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NJJ6TC72GU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FratriaVPN/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FratriaVPN",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.balandzin.FratriaVPN;
@@ -326,6 +473,66 @@
 			};
 			name = Release;
 		};
+		D39A09E42D3FB19B001919E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNExtension/VPNExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NJJ6TC72GU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.balandzin.FratriaVPN.VPNExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D39A09E52D3FB19B001919E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNExtension/VPNExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NJJ6TC72GU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.balandzin.FratriaVPN.VPNExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -347,10 +554,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		D39A09E32D3FB19B001919E2 /* Build configuration list for PBXNativeTarget "VPNExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D39A09E42D3FB19B001919E2 /* Debug */,
+				D39A09E52D3FB19B001919E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D39A097F2D3EA75B001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		D39A09BB2D3EC1CB001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -361,9 +577,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D39A09802D3EA75B001919E2 /* SnapKit */ = {
+		D39A09BC2D3EC1CB001919E2 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D39A097F2D3EA75B001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = D39A09BB2D3EC1CB001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
