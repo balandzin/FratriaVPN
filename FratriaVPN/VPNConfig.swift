@@ -8,7 +8,7 @@
 import Foundation
 
 class VPNConfig {
-    
+
     static func generateVLESSConfig() -> [String: Any] {
         return [
             "log": [
@@ -56,4 +56,3 @@ class VPNConfig {
         ]
     }
 }
-
