@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D36D7AD52D42477A00C4C841 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D36D7AD42D42477A00C4C841 /* SnapKit */; };
 		D39A09E22D3FB19B001919E2 /* VPNExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D39A09D72D3FB19B001919E2 /* VPNExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D39A09EC2D3FC3FE001919E2 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */; };
 		D39A09ED2D3FC3FE001919E2 /* NetworkExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D39A09D92D3FB19B001919E2 /* NetworkExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D39A0A952D3FE055001919E2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D39A0A942D3FE055001919E2 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +55,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D39A09792D3EA5AF001919E2 /* Exceptions for "FratriaVPN" folder in "FratriaVPN" target */ = {
+		D36D7AD62D42481E00C4C841 /* Exceptions for "FratriaVPN" folder in "FratriaVPN" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				App/Info.plist,
+				Info.plist,
 			);
 			target = D39A09662D3EA5AD001919E2 /* FratriaVPN */;
 		};
@@ -83,7 +83,7 @@
 		D39A09692D3EA5AD001919E2 /* FratriaVPN */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D39A09792D3EA5AF001919E2 /* Exceptions for "FratriaVPN" folder in "FratriaVPN" target */,
+				D36D7AD62D42481E00C4C841 /* Exceptions for "FratriaVPN" folder in "FratriaVPN" target */,
 				D39A09EB2D3FB542001919E2 /* Exceptions for "FratriaVPN" folder in "VPNExtension" target */,
 			);
 			path = FratriaVPN;
@@ -104,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39A0A952D3FE055001919E2 /* SnapKit in Frameworks */,
+				D36D7AD52D42477A00C4C841 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,7 +168,7 @@
 			);
 			name = FratriaVPN;
 			packageProductDependencies = (
-				D39A0A942D3FE055001919E2 /* SnapKit */,
+				D36D7AD42D42477A00C4C841 /* SnapKit */,
 			);
 			productName = FratriaVPN;
 			productReference = D39A09672D3EA5AD001919E2 /* FratriaVPN.app */;
@@ -225,7 +225,7 @@
 			mainGroup = D39A095E2D3EA5AD001919E2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				D39A0A932D3FE055001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				D36D7AD32D42477A00C4C841 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D39A09682D3EA5AD001919E2 /* Products */;
@@ -291,7 +291,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NJJ6TC72GU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FratriaVPN/App/Info.plist;
+				INFOPLIST_FILE = FratriaVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -329,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NJJ6TC72GU;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FratriaVPN/App/Info.plist;
+				INFOPLIST_FILE = FratriaVPN/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = "";
@@ -409,7 +409,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -466,7 +466,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -571,7 +571,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D39A0A932D3FE055001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		D36D7AD32D42477A00C4C841 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -582,9 +582,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D39A0A942D3FE055001919E2 /* SnapKit */ = {
+		D36D7AD42D42477A00C4C841 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D39A0A932D3FE055001919E2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = D36D7AD32D42477A00C4C841 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

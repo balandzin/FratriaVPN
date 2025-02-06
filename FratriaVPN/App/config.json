@@ -1,0 +1,36 @@
+{
+  "log": {
+    "loglevel": "info"
+  },
+  "inbounds": [],
+  "outbounds": [
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "rutube.isgood.host",
+            "port": 443,
+            "users": [
+              {
+                "id": "a5b9a322-08bf-4317-b595-6699857b6273",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "publicKey": "UazJ26ISl27oAxaDjJyPc0SJXKSZGQE1g3iL-G5Puy4",
+          "shortId": "d85691ce70184fd2",
+          "serverName": "twitch.tv",
+          "spx": "/"
+        }
+      }
+    }
+  ]
+}
